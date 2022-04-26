@@ -8,7 +8,7 @@
 
     <Button
         android:id="@+id/btnTakePicture"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="CAMARA"
         android:layout_below="@+id/imgCapture"
@@ -18,10 +18,10 @@
 
     <ImageView
         android:id="@+id/imgCapture"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:srcCompat="@tools:sample/avatars"
+        android:layout_width="400dp"
+        android:layout_height="400dp"
         android:layout_centerHorizontal="true"
+        tools:srcCompat="@tools:sample/avatars"
 
         />
 

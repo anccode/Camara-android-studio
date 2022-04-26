@@ -1,6 +1,7 @@
 package com.camara;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.PersistableBundle;
 import android.provider.MediaStore;
@@ -31,5 +32,14 @@ public class MainActivity extends AppCompatActivity {
                 startActivityForResult(cInt,image_Capture_Code);
             }
         });
+
+    }
+    protected void onActivityResult(int requestCode, int resultCode, Intent data){
+        super.onActivityResult(requestCode,resultCode, data);
+        if(requestCode==1 && resultCode ==RESULT_OK){
+            Bundle extras = data.getExtras();
+            Bitmap imgBitmap = (Bitmap)  extras.get("data");
+            imgCapture.setImageBitmap(imgBitmap);
+        }
     }
 }
